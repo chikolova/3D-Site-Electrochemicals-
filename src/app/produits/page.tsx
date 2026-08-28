@@ -30,9 +30,8 @@ export default function ProductsPage() {
           {PRODUCT_COUNT} produits répartis en {PRODUCT_CATEGORIES.length} catégories.
         </h1>
         <p className="text-muted max-w-xl mb-14">
-          Fiches techniques détaillées — concentrations, températures,
-          densités de courant — disponibles sur demande pour chaque
-          référence. Contactez notre service commercial pour les obtenir.
+          Contactez notre service commercial pour toute question sur une
+          référence ou pour un devis.
         </p>
 
         <CatalogClient categories={PRODUCT_CATEGORIES} />

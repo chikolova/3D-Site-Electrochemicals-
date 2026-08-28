@@ -50,9 +50,6 @@ export default function CatalogClient({
                   className="rounded-xl border border-border bg-surface px-5 py-4 hover:border-accent-from/60 transition-colors"
                 >
                   <p className="font-mono text-sm">{product.name}</p>
-                  <p className="mt-1 text-xs text-muted">
-                    Fiche technique sur demande
-                  </p>
                 </div>
               ))}
             </div>

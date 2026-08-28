@@ -25,8 +25,7 @@ export default function Products() {
       </h2>
       <p className="text-muted max-w-xl mb-14">
         {PRODUCT_COUNT} références réparties en {PRODUCT_CATEGORIES.length}{" "}
-        catégories — fiches techniques (concentrations, températures,
-        densités de courant) disponibles sur demande pour chaque référence.
+        catégories, pour chaque étape du process de traitement de surface.
       </p>
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">

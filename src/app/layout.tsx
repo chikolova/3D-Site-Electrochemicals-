@@ -13,15 +13,15 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Voltara Materials — Electrochemical Engineering",
+  title: "ELECTROCHEMICALS — Traitement de surface & Galvanoplastie",
   description:
-    "Voltara Materials designs and manufactures battery-grade electrolytes and electrochemical materials for next-generation energy storage.",
+    "ELECTROCHEMICALS conçoit, fournit et installe des produits chimiques, anodes, équipements et lignes automatisées de traitement de surface et de galvanoplastie depuis plus de 20 ans, à Alger, Algérie.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
-      lang="en"
+      lang="fr"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-background text-foreground">

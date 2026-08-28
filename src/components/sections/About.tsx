@@ -1,8 +1,8 @@
 const STATS = [
-  { value: "99.999%", label: "Electrolyte purity" },
-  { value: "40+", label: "Formulations shipped" },
-  { value: "12", label: "Patents in electrochemistry" },
-  { value: "24/7", label: "Analytical QC" },
+  { value: "20+", label: "Années d'expérience" },
+  { value: "13", label: "Secteurs industriels servis" },
+  { value: "10", label: "Procédés électrolytiques maîtrisés" },
+  { value: "3", label: "Métiers : chimie, équipements, eaux" },
 ];
 
 export default function About() {
@@ -11,17 +11,23 @@ export default function About() {
       <div className="grid md:grid-cols-2 gap-16 items-start">
         <div>
           <p className="text-xs uppercase tracking-[0.3em] text-accent-from mb-4">
-            About Voltara
+            À propos d&apos;ELECTROCHEMICALS
           </p>
           <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight mb-6">
-            Precision chemistry for the energy transition.
+            Fournisseur et intégrateur de lignes de traitement de surface.
           </h2>
           <p className="text-muted leading-relaxed">
-            We design electrolyte systems and electrochemical materials at the
-            molecular level — balancing ionic conductivity, thermal stability,
-            and manufacturability. Our lab-to-plant pipeline takes a
-            formulation from bench synthesis to qualified production batches
-            without losing performance along the way.
+            Basée à Mohammadia, Alger, ELECTROCHEMICALS fournit depuis plus de
+            20 ans les produits chimiques et équipements de traitement de
+            surface et de galvanoplastie. Nous allons au-delà de la simple
+            fourniture de produits : nous concevons, construisons et
+            installons des lignes automatisées complètes, expédiées et mises
+            en service partout dans le monde.
+          </p>
+          <p className="mt-4 text-muted leading-relaxed">
+            Nos produits répondent aux normes environnementales en vigueur, et
+            notre division dédiée au traitement des eaux et effluents
+            accompagne nos clients sur l&apos;ensemble du cycle de production.
           </p>
         </div>
 

@@ -1,42 +1,18 @@
-const CATEGORIES = [
-  {
-    title: "Dégraissage chimique & électrolytique",
-    examples: ["Emulsol", "Cleaner A70", "Ecleaner A100", "TA-50"],
-  },
-  {
-    title: "Décapage",
-    examples: ["IT-11", "IT-12", "Pickler"],
-  },
-  {
-    title: "Zinc & passivations",
-    examples: ["Zincal 500", "Alcazinc", "Polyzinc", "Bluepass 70"],
-  },
-  {
-    title: "Cadmium",
-    examples: ["Cadyte"],
-  },
-  {
-    title: "Étain",
-    examples: ["Stalux 100", "Etalux 200"],
-  },
-  {
-    title: "Cuivre & laiton",
-    examples: ["Cuprex 500", "Cuprite 200", "Copper 700", "Brass 777"],
-  },
-  {
-    title: "Nickel",
-    examples: [
-      "Nickel Velours",
-      "Nickel Semi-Brillant",
-      "Nickel Sulfamate",
-      "Bright 1070",
-    ],
-  },
-  {
-    title: "Chrome",
-    examples: ["Trichrom", "Chrodura", "Chroblack", "Fogless"],
-  },
-];
+import Link from "next/link";
+import { PRODUCT_CATEGORIES, PRODUCT_COUNT } from "@/data/products";
+
+const HIGHLIGHTS = PRODUCT_CATEGORIES.filter((cat) =>
+  [
+    "degraissage-chimique",
+    "decapage",
+    "zinc-acide",
+    "cadmium-cyanure",
+    "etain-acide",
+    "cuivre",
+    "nickel",
+    "chrome",
+  ].includes(cat.slug)
+);
 
 export default function Products() {
   return (
@@ -48,28 +24,36 @@ export default function Products() {
         Un catalogue complet pour chaque étape du bain.
       </h2>
       <p className="text-muted max-w-xl mb-14">
-        Fiches techniques détaillées — concentrations, températures,
-        densités de courant — disponibles sur demande pour chaque référence.
+        {PRODUCT_COUNT} références réparties en {PRODUCT_CATEGORIES.length}{" "}
+        catégories — fiches techniques (concentrations, températures,
+        densités de courant) disponibles sur demande pour chaque référence.
       </p>
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        {CATEGORIES.map((category) => (
+        {HIGHLIGHTS.map((category) => (
           <div
-            key={category.title}
+            key={category.slug}
             className="group rounded-2xl border border-border bg-surface p-6 hover:border-accent-from/60 transition-colors"
           >
             <div className="h-8 w-8 rounded-full bg-gradient-to-r from-accent-from to-accent-to mb-5 opacity-80 group-hover:opacity-100 transition-opacity" />
             <h3 className="text-sm font-medium mb-3">{category.title}</h3>
             <ul className="space-y-1">
-              {category.examples.map((example) => (
-                <li key={example} className="text-xs text-muted font-mono">
-                  {example}
+              {category.products.slice(0, 4).map((product) => (
+                <li key={product.slug} className="text-xs text-muted font-mono">
+                  {product.name}
                 </li>
               ))}
             </ul>
           </div>
         ))}
       </div>
+
+      <Link
+        href="/produits"
+        className="inline-block mt-10 text-sm text-accent-from hover:underline underline-offset-4"
+      >
+        Voir le catalogue complet →
+      </Link>
     </section>
   );
 }
